@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Jmainguy/soh-router/compare/v1.0.0...v1.0.1) (2023-07-22)
+
+
+### Bug Fixes
+
+* add changes to goreleaser to trigger on releases ([35f7709](https://github.com/Jmainguy/soh-router/commit/35f7709aba5bcbaa82027d5b80e0a7ef872d4b15))
+
 ## 1.0.0 (2023-07-22)
 
 
