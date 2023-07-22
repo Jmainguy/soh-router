@@ -1,9 +1,8 @@
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: [published]
 
-name: release
+name: goreleaser
 jobs:
     release:
         name: run goreleaser
