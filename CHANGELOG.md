@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/Jmainguy/soh-router/compare/v1.0.3...v1.0.4) (2023-07-23)
+
+
+### Bug Fixes
+
+* goreleaser needs token specified ([413df0d](https://github.com/Jmainguy/soh-router/commit/413df0de241c35dd18912fba9a70c8aee41f2475))
+
 ## [1.0.3](https://github.com/Jmainguy/soh-router/compare/v1.0.2...v1.0.3) (2023-07-23)
 
 
