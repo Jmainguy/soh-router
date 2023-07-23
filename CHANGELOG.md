@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/Jmainguy/soh-router/compare/v1.0.2...v1.0.3) (2023-07-23)
+
+
+### Bug Fixes
+
+* ci yamls ([3015ba4](https://github.com/Jmainguy/soh-router/commit/3015ba44ffab5fd3e113b2f56c09b9236b463d97))
+
 ## [1.0.2](https://github.com/Jmainguy/soh-router/compare/v1.0.1...v1.0.2) (2023-07-23)
 
 
