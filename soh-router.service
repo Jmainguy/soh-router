@@ -5,7 +5,7 @@ After=network.target remote-fs.target nss-lookup.target
 [Service]
 Type=simple
 
-ExecStart=/usr/local/bin/soh-router
+ExecStart=/usr/bin/soh-router
 SuccessExitStatus=2
 Restart=always
 RestartSec=1s
