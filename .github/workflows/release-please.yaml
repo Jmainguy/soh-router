@@ -12,6 +12,7 @@ jobs:
       release_created: ${{ steps.release-please.outputs.release_created }}
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release-please
         with:
           release-type: go
 
