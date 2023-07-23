@@ -19,9 +19,6 @@ builds:
 
 archives:
 - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
-  replacements:
-    linux: Linux
-    amd64: x86_64
   files:
     - LICENSE
     - README.md
@@ -35,10 +32,13 @@ nfpms:
   license: GPLv2
   vendor: Jmainguy
   release: 1
-  replacements:
-    amd64: x86_64
   overrides:
       deb:
         file_name_template: "{{ .ProjectName }}_{{ .Version }}-{{.Release}}_{{ .Arch }}"
   formats:
   - deb
+  bindir: /usr/bin
+  changelog: ./CHANGELOG.md
+  contents:
+    - src: soh-router.service
+      dst: /usr/lib/systemd/system/soh-router.service
