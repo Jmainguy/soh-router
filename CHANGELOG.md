@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/Jmainguy/soh-router/compare/v1.0.4...v1.0.5) (2023-07-24)
+
+
+### Bug Fixes
+
+* fix linting errors and move funcs out of main.go ([90a4774](https://github.com/Jmainguy/soh-router/commit/90a47746a4ea8945927777653444f2e4c3abb4ce))
+* path in .service file ([7ab6875](https://github.com/Jmainguy/soh-router/commit/7ab687524e166223c14dbcf7a2e729847568e6c8))
+
 ## [1.0.4](https://github.com/Jmainguy/soh-router/compare/v1.0.3...v1.0.4) (2023-07-23)
 
 
