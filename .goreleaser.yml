@@ -23,6 +23,7 @@ archives:
     - LICENSE
     - README.md
     - soh-router.service
+    - config.yaml
 
 nfpms:
 - file_name_template: '{{ .ProjectName }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
@@ -41,3 +42,13 @@ nfpms:
   contents:
     - src: soh-router.service
       dst: /usr/lib/systemd/system/soh-router.service
+    - src: config.yaml
+      dst: /etc/soh-router/config.yaml
+    - dst: /opt/soh-router
+      type: dir
+      file_info:
+        mode: 0755
+    - dst: /etc/soh-router
+      type: dir
+      file_info:
+        mode: 0755

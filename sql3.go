@@ -3,8 +3,9 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	_ "github.com/mattn/go-sqlite3"
 	"log"
+
+	_ "github.com/mattn/go-sqlite3"
 )
 
 // TestItem : A test Item
@@ -77,7 +78,8 @@ func StoreItem(db *sql.DB, items []TestItem) {
 		if err != nil {
 			log.Println(err)
 			log.Println("doing rollback")
-			tx.Rollback()
+			err = tx.Rollback()
+			check(err)
 		} else {
 			err = tx.Commit()
 			check(err)
@@ -108,7 +110,8 @@ func DelName(db *sql.DB, name string) {
 	if err != nil {
 		log.Println(err)
 		log.Println("doing rollback")
-		tx.Rollback()
+		err = tx.Rollback()
+		check(err)
 	} else {
 		err = tx.Commit()
 		check(err)

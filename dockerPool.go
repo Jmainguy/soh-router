@@ -4,11 +4,12 @@ import (
 	"crypto/rand"
 	"database/sql"
 	"fmt"
-	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os/exec"
 	"strings"
 	"time"
+
+	_ "github.com/mattn/go-sqlite3"
 )
 
 func dockerStuff(db *sql.DB) {
@@ -37,7 +38,7 @@ func dockerStuff(db *sql.DB) {
 func addDockerToPool(db *sql.DB, url, name string) {
 	// Store current, and average
 	items := []TestItem{
-		TestItem{url, name},
+		{url, name},
 	}
 
 	StoreItem(db, items)
@@ -67,10 +68,14 @@ func reap(db *sql.DB, name string) {
 	if err != nil {
 		DelName(db, name)
 		log.Printf("Reaped %v", name)
-	}
-	if isRunning == "false\n" {
+	} else if isRunning == "false\n" {
 		DelName(db, name)
 		log.Printf("Reaped %v", name)
+	} else if isRunning == "'false'\n" {
+		DelName(db, name)
+		log.Printf("Reaped %v", name)
+	} else {
+		log.Printf("Did not reap %v because isRunning returned ===%v===", name, isRunning)
 	}
 }
 
@@ -79,10 +84,11 @@ func poolReaper(db *sql.DB) {
 		// Get all the rows
 		var name string
 		rows, err := db.Query("SELECT name FROM docker_pool;")
+		check(err)
 		var s []string
 		for rows.Next() {
-			err = rows.Scan(&name)
-			check(err)
+			scanErr := rows.Scan(&name)
+			check(scanErr)
 			s = append(s, name)
 		}
 
