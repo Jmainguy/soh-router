@@ -1,13 +1,15 @@
 package main
 
 import (
-	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"net"
+
+	_ "github.com/mattn/go-sqlite3"
 )
 
 func main() {
-	sqldb := config()
+	sqldb, err := config()
+	check(err)
 	db := InitDB(sqldb)
 	CreateTable(db)
 	listener, err := net.Listen("tcp", "0.0.0.0:8085")

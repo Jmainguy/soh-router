@@ -1,8 +1,9 @@
 package main
 
 import (
+	"os"
+
 	"github.com/ghodss/yaml"
-	"io/ioutil"
 )
 
 // Config : configuration struct
@@ -10,11 +11,11 @@ type Config struct {
 	Sqldb string `json:"sqldb"`
 }
 
-func config() (sqldb string) {
+func config() (sqldb string, err error) {
 	var v Config
-	configFile, err := ioutil.ReadFile("/etc/soh-router/config.yaml")
+	configFile, err := os.ReadFile("/etc/soh-router/config.yaml")
 	check(err)
-	yaml.Unmarshal(configFile, &v)
+	err = yaml.Unmarshal(configFile, &v)
 	sqldb = v.Sqldb
-	return
+	return sqldb, err
 }
