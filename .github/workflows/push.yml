@@ -1,6 +1,7 @@
 on:
   push:
-name: push
+    name: push
+
 jobs:
   golangci:
     name: golangci
@@ -15,8 +16,15 @@ jobs:
     name: Go Test with Coverage
     runs-on: ubuntu-latest
     steps:
+      - name: Cache Go dependencies
+        uses: actions/cache@v2
+        with:
+          path: go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v2
         with:
           go-version: '1.19'
       - name: Checkout code
@@ -34,8 +42,15 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Cache Go dependencies
+        uses: actions/cache@v2
+        with:
+          path: go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v2
         with:
           go-version: '1.19'
       - name: Checkout code
@@ -47,8 +62,15 @@ jobs:
     name: Lint and fmt
     runs-on: ubuntu-latest
     steps:
+      - name: Cache Go dependencies
+        uses: actions/cache@v2
+        with:
+          path: go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v2
         with:
           go-version: '1.19'
       - name: Install golint
@@ -62,8 +84,15 @@ jobs:
     name: Trivy Software Composition Analysis
     runs-on: ubuntu-latest
     steps:       
+      - name: Cache Go dependencies
+        uses: actions/cache@v2
+        with:
+          path: go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v2
         with:
           go-version: '1.19'
       - name: Install golint
