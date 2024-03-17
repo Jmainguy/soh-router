@@ -1,7 +1,7 @@
 on:
   push:
-    name: push
 
+name: push
 jobs:
   golangci:
     name: golangci
