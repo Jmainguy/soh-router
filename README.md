@@ -25,14 +25,13 @@ graph TD;
         end
     end
     end
-    subgraph "Virtual Machine"
-        B -->|Websocket| C[soh-router]
-        C -->|Websocket| D[Docker Container]
-        D -->|Websocket| E[New Docker Container]
+    subgraph "Server"
+        B -->|tcp| C[soh-router]
+        C -->|tcp| D[Docker Container]
     end
 ```
 
-Explanation:
+#### Explanation:
 
 1. The internet traffic comes in and reaches the HAProxy.
 2. HAProxy listens on the domain soh.re on ports 80 and 443.
