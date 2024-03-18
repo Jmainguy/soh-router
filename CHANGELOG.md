@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/Jmainguy/soh-router/compare/v1.0.7...v1.0.8) (2024-03-18)
+
+
+### Bug Fixes
+
+* update goreleaser to 1.21 ([f14da5c](https://github.com/Jmainguy/soh-router/commit/f14da5c487a1510a096be32699a5a3ac0a539a86))
+
 ## [1.0.7](https://github.com/Jmainguy/soh-router/compare/v1.0.6...v1.0.7) (2024-03-18)
 
 
