@@ -16,15 +16,6 @@ jobs:
     name: Go Test with Coverage
     runs-on: ubuntu-latest
     steps:
-      - name: Cache Go dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            go/pkg/mod
-            go.sum
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -44,15 +35,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Cache Go dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            go/pkg/mod
-            go.sum
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -66,15 +48,6 @@ jobs:
     name: Lint and fmt
     runs-on: ubuntu-latest
     steps:
-      - name: Cache Go dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            go/pkg/mod
-            go.sum
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -90,15 +63,6 @@ jobs:
     name: Trivy Software Composition Analysis
     runs-on: ubuntu-latest
     steps:       
-      - name: Cache Go dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            go/pkg/mod
-            go.sum
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
