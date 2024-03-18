@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.7](https://github.com/Jmainguy/soh-router/compare/v1.0.6...v1.0.7) (2024-03-18)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/mattn/go-sqlite3 to v1.14.22 ([47145c1](https://github.com/Jmainguy/soh-router/commit/47145c120e4f1973f7bfc6eeee21f53e44e3fccc))
+* update dependencies, add cicd ([3129cb4](https://github.com/Jmainguy/soh-router/commit/3129cb4196158340982807ca1c5defc7e25c12f6))
+* update to go 1.21 ([8bcdcec](https://github.com/Jmainguy/soh-router/commit/8bcdcec9b6c7f13f23bdb3875c643152c6cbde11))
+
 ## [1.0.6](https://github.com/Jmainguy/soh-router/compare/v1.0.5...v1.0.6) (2023-11-27)
 
 
