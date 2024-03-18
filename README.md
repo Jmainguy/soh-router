@@ -26,7 +26,7 @@ graph TD;
     end
     end
     subgraph "Server"
-        B -->|tcp| C[soh-router]
+        B -->|websocket| C[soh-router]
         C -->|tcp| D[Docker Container]
     end
 ```
