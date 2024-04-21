@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/Jmainguy/soh-router/compare/v1.0.8...v1.0.9) (2024-04-21)
+
+
+### Bug Fixes
+
+* --rm after docker container dies ([8e16390](https://github.com/Jmainguy/soh-router/commit/8e1639027fa910062031a819ca2bde3e757fec2f))
+
 ## [1.0.8](https://github.com/Jmainguy/soh-router/compare/v1.0.7...v1.0.8) (2024-03-18)
 
 
