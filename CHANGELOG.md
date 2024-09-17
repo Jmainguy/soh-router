@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/Jmainguy/soh-router/compare/v1.0.9...v1.0.10) (2024-09-17)
+
+
+### Bug Fixes
+
+* update to latest dependencies ([a366342](https://github.com/Jmainguy/soh-router/commit/a366342279c611308034e0e3adb04bf161504f02))
+
 ## [1.0.9](https://github.com/Jmainguy/soh-router/compare/v1.0.8...v1.0.9) (2024-04-21)
 
 
