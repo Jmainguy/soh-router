@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.11](https://github.com/Jmainguy/soh-router/compare/v1.0.10...v1.0.11) (2024-10-25)
+
+
+### Bug Fixes
+
+* change to new image name ([7aa4329](https://github.com/Jmainguy/soh-router/commit/7aa43297b19669be10b1c3414da773f152d1edc9))
+* **deps:** update module github.com/mattn/go-sqlite3 to v1.14.24 ([253d4be](https://github.com/Jmainguy/soh-router/commit/253d4beb6009107991d00ecb426f5c1fb17be375))
+
 ## [1.0.10](https://github.com/Jmainguy/soh-router/compare/v1.0.9...v1.0.10) (2024-09-17)
 
 
